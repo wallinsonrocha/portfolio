@@ -1,0 +1,27 @@
+#sobre-mim-cta{
+    background-image: url(/assets/media/about-me.png);
+    background-repeat: no-repeat;
+
+    display: grid;
+    place-items: center;
+
+    img{
+        width: 90vw;
+    }
+
+    #about_content{
+        display: flex;
+        flex-direction: column;
+        max-width: 376px;
+
+        a{
+            margin-top: 40px;
+        }
+
+        #content__paragrafs{
+            display: grid;
+            gap: 1rem;
+            margin-top: 20px;
+        }
+    }
+}

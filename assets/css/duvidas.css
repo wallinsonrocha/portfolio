@@ -1,0 +1,56 @@
+#duvidas {
+  background-color: #0F4665;
+  display: grid;
+  place-items: center;
+}
+#duvidas h1 {
+  color: #fff;
+}
+#duvidas .ask-content {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  transition: all 1s ease;
+}
+#duvidas .ask-content .content_ask {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+}
+#duvidas .ask-content .content_ask p {
+  font-weight: bold;
+}
+#duvidas .ask-content .content_ask .content_expand {
+  position: relative;
+  height: 20px;
+  width: 20px;
+}
+#duvidas .ask-content .content_ask .content_expand div {
+  position: absolute;
+  top: 50%;
+  height: 3px;
+  width: 20px;
+  background-color: #000;
+  transform: translate(-50% -50%);
+  transition: all 0.3s ease;
+}
+#duvidas .ask-content .content_ask .content_expand div:nth-child(1) {
+  transform: rotate(90deg);
+}
+#duvidas .ask-content .content_ask .content_expand_close div:nth-child(1) {
+  transform: rotate(0deg);
+}
+#duvidas .ask-content .content_answer {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s ease;
+}
+#duvidas .ask-content .content_answer p {
+  font-weight: 400;
+  padding: 1rem 2rem;
+}
+#duvidas .ask-content .answer_open {
+  height: 150px;
+}
+#duvidas .ask-content-open {
+  border-radius: 20px 20px 0 0;
+}

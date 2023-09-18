@@ -1,0 +1,40 @@
+#why {
+  background-image: url("../media/why-site.jpg");
+  background-size: cover;
+  overflow: hidden;
+  padding: 0;
+}
+#why #why__blurbg {
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(15, 70, 101, 0.1);
+}
+#why .why__content {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  max-width: 90vw;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+}
+#why .why__content div {
+  display: grid;
+  gap: 1rem;
+}
+#why .why__content div span {
+  color: #094DFC;
+  font-weight: bolder;
+}
+#why .why__content h2 {
+  font-weight: bold;
+}
+#why img {
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}

@@ -1,0 +1,72 @@
+#duvidas{
+    background-color: #0F4665;
+
+    display: grid;
+    place-items: center;
+
+    h1{
+        color: #fff;
+    }
+
+    .ask-content{
+        background-color: #f5f5f5;   
+        border-radius: 20px;     
+        transition: all 1s ease;
+
+        .content_ask{
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 2rem;
+
+            p{
+                font-weight: bold;
+            }
+
+            .content_expand{
+                position: relative;
+                height: 20px;
+                width: 20px;
+
+                div{              
+                    position: absolute;      
+                    top: 50%;
+                    height: 3px;
+                    width: 20px;
+                    background-color: #000;
+
+                    transform: translate(-50% -50%);         
+                    transition: all .3s ease;           
+                }
+
+                div:nth-child(1){
+                    transform: rotate(90deg);
+                }                
+            }
+
+            .content_expand_close{
+                div:nth-child(1){
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .content_answer{                        
+            overflow: hidden;
+            height: 0;
+            transition: all .3s ease;
+
+            p{
+                font-weight: 400;
+                padding: 1rem 2rem;
+            }
+        }
+
+        .answer_open{            
+            height: 150px;
+        }
+    }
+
+    .ask-content-open{
+        border-radius: 20px 20px 0 0;
+    }
+}
