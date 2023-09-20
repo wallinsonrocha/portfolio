@@ -45,3 +45,48 @@
   object-fit: cover;
   z-index: 1;
 }
+
+@media (min-width: 768px) {
+  .why__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+  }
+  .why__content img {
+    width: 90%;
+  }
+}
+@media (min-width: 1024px) {
+  #why {
+    display: flex;
+    justify-content: center;
+    height: 1500px;
+  }
+  #why #why__blurbg {
+    display: flex;
+    flex-direction: column;
+    width: 1090px;
+  }
+  #why #why__blurbg .why__content {
+    width: 100%;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #why #why__blurbg .why__content .why-text {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 0px;
+  }
+  #why #why__blurbg .why__content img {
+    transform: scale(2.5);
+    width: 20%;
+  }
+  #why #why__blurbg .why__content:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+}

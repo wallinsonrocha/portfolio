@@ -65,3 +65,9 @@ footer{
         padding: 3rem;
     }
 }
+
+@media (min-width: 1024px){
+    section{
+        padding: 3rem 10rem;
+    }
+}

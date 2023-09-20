@@ -115,6 +115,10 @@
   }
 }
 @media (min-width: 1024px) {
+  #portifolio #circle-area-port {
+    position: relative;
+    margin-top: 76vh;
+  }
   #portifolio #circle-port {
     height: 800px;
     width: 800px;
@@ -122,5 +126,12 @@
   #portifolio #circle-port .port {
     width: 10rem;
     height: 10rem;
+  }
+  #portifolio #portfolio-area .port {
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    padding: 5rem;
+    gap: 3rem;
   }
 }

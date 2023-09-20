@@ -39,7 +39,7 @@
     <main>
 
         <!-- HOME -->
-        <section id="home">
+        <section id="home">            
             <img id="logo" src="assets/media/logo.svg" alt="Logo Wallinson">
 
             <div class="content-home">
@@ -388,9 +388,11 @@
                 <template x-for="(content,i) in (portContent)">
                     <div class="port" x-bind:class="(position==i) ? 'port-active' : ''" x-bind:style="`background-image: url(${content.bg})`">
                         <img x-bind:src="content.img">
-                        <h2 x-text="content.title"></h2>    
-                        <p x-text="content.text"></p>
-                        <a x-bind:href="content.link">Ver site</a>
+                        <div>
+                            <h2 x-text="content.title"></h2>    
+                            <p x-text="content.text"></p>
+                            <a x-bind:href="content.link">Ver site</a>
+                        </div>
                     </div>
                 </template>
             </div>
@@ -502,30 +504,32 @@
 
         <section id="sobre-mim-cta">
             <h1>Sobre mim</h1>
-            <img src="assets/media/Wallinson.png" alt="">
-            <div id="about_content">
-                <h3>Prazer, eu sou Wallinson</h3>
-                <div id="content__paragrafs">
-                    <p>
-                        Olá! Sou Wallinson, um Desenvolvedor Web apaixonado por transformar ideias em realidade digital.
-                        Com
-                        uma vasta experiência que abrange desde HTML e CSS até ferramentas robustas como o Django, estou
-                        aqui para impulsionar o seu sucesso.
-                    </p>
-
-                    <p>
-                        Minha missão sempre foi ajudar pequenas e médias empresas a prosperar, aumentando suas vendas e
-                        presença online. Se você está em busca de um parceiro para fortalecer o seu negócio na web, não
-                        hesite em me contatar.
-                    </p>
-
-                    <p>
-                        Não perca mais tempo, solicite um orçamento e vamos começar a trabalhar juntos na construção do
-                        seu
-                        sucesso online. Venha fazer parte do nosso time!
-                    </p>
+            <div class="sobre-img-content">
+                <img src="assets/media/Wallinson.png" alt="">
+                <div id="about_content">
+                    <h3>Prazer, eu sou Wallinson</h3>
+                    <div id="content__paragrafs">
+                        <p>
+                            Olá! Sou Wallinson, um Desenvolvedor Web apaixonado por transformar ideias em realidade digital.
+                            Com
+                            uma vasta experiência que abrange desde HTML e CSS até ferramentas robustas como o Django, estou
+                            aqui para impulsionar o seu sucesso.
+                        </p>
+    
+                        <p>
+                            Minha missão sempre foi ajudar pequenas e médias empresas a prosperar, aumentando suas vendas e
+                            presença online. Se você está em busca de um parceiro para fortalecer o seu negócio na web, não
+                            hesite em me contatar.
+                        </p>
+    
+                        <p>
+                            Não perca mais tempo, solicite um orçamento e vamos começar a trabalhar juntos na construção do
+                            seu
+                            sucesso online. Venha fazer parte do nosso time!
+                        </p>
+                    </div>
+                    <a href="#">SOLICITE UM ORÇAMENTO</a>
                 </div>
-                <a href="#">SOLICITE UM ORÇAMENTO</a>
             </div>
         </section>
 
