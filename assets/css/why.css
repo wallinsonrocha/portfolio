@@ -22,13 +22,20 @@
   padding: 1rem;
   border-radius: 20px;
 }
-#why .why__content div {
+#why .why__content .why-text {
   display: grid;
   gap: 1rem;
+  overflow: hidden;
+  max-width: 410px;
+  height: 0px;
+  transition: all 0.3s ease;
 }
-#why .why__content div span {
+#why .why__content .why-text span {
   color: #094DFC;
   font-weight: bolder;
+}
+#why .why__content .why-text-reveal {
+  height: 310px;
 }
 #why .why__content h2 {
   font-weight: bold;

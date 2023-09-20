@@ -110,3 +110,9 @@
 {
 	opacity: 1;
 }
+
+/* Mobile effect */
+.container2 .drop-active
+{
+	border-radius: 5% !important;
+}

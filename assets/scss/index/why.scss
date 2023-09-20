@@ -28,14 +28,24 @@
         border-radius: 20px;
         
 
-        div{
+        .why-text{
             display: grid;
             gap: 1rem;
+            overflow: hidden;
+            
+            max-width: 410px;
+            height: 0px;
+
+            transition: all .3s ease;
 
             span{
                 color: #094DFC;
                 font-weight: bolder;
             }
+        }
+
+        .why-text-reveal{
+            height: 310px;
         }
 
         h2{

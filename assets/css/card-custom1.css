@@ -149,3 +149,44 @@
 	background: #2e2e2e;
 	color: var(--clr);
 }
+
+/* Mobile effect */
+.container .box-active::before 
+{
+	transform: skew(0deg);
+	inset: -10px 40px;
+}
+
+.container .box-active::after 
+{
+	transform: skew(0deg);
+	inset: 40px -10px;
+}
+
+.container .box-active .content .icon
+{
+	color : #2e2e2e;
+	background: var(--clr);
+	box-shadow: 0 0 0 4px #2e2e2e,
+	0 0 0 1000px var(--clr);
+}
+
+.container .box-active .content svg{
+    fill: #2e2e2e;
+}
+
+.container .box-active .content .text .text__title
+{
+	color: #2e2e2e;
+}
+
+.container .box-active .content .text p
+{
+	color: #333;
+}
+
+.container .box-active .content .text a
+{
+	background: #2e2e2e;
+	color: var(--clr);
+}

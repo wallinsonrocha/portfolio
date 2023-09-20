@@ -25,16 +25,38 @@
     }
 
     #scroll-down{
-        padding: 0;
+        padding: 0;        
     }
 
     #arrow-down{
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 5vh;
+        bottom: 20px;
         height: 60px;
         width: 60px;         
-        margin: auto;        
+        margin: auto;                
+        animation: jumpAndScroll 2s ease infinite;
     }
 }
+
+@keyframes jumpAndScroll {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-20px);
+    }
+    40% {
+      transform: translateY(0);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+    80% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
