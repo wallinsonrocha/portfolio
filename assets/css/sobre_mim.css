@@ -8,6 +8,9 @@
 #sobre-mim-cta img {
   width: 90vw;
 }
+#sobre-mim-cta h1 {
+  margin-bottom: 3rem;
+}
 #sobre-mim-cta #about_content {
   display: flex;
   flex-direction: column;
@@ -20,4 +23,10 @@
   display: grid;
   gap: 1rem;
   margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  #sobre-mim-cta img {
+    width: 70%;
+  }
 }

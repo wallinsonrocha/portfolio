@@ -60,3 +60,8 @@ footer{
     place-items: center;
 }
 
+@media (min-width: 768px){
+    section{
+        padding: 3rem;
+    }
+}

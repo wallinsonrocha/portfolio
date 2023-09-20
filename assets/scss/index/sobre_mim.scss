@@ -10,6 +10,10 @@
         width: 90vw;
     }
 
+    h1{
+        margin-bottom: 3rem;
+    }
+
     #about_content{
         display: flex;
         flex-direction: column;
@@ -24,5 +28,13 @@
             gap: 1rem;
             margin-top: 20px;
         }
+    }
+}
+
+@media (min-width: 768px){
+    #sobre-mim-cta{
+        img{
+            width: 70%;
+        }    
     }
 }
