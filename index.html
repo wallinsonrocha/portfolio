@@ -384,9 +384,19 @@
 
         <!-- PORTIFOLIO -->
         <section id="portifolio" x-data="ciclePort">
+            <div id="portfolio-area">
+                <template x-for="(content,i) in (portContent)">
+                    <div class="port" x-bind:class="(position==i) ? 'port-active' : ''" x-bind:style="`background-image: url(${content.bg})`">
+                        <img x-bind:src="content.img">
+                        <h2 x-text="content.title"></h2>    
+                        <p x-text="content.text"></p>
+                        <a x-bind:href="content.link">Ver site</a>
+                    </div>
+                </template>
+            </div>
             <div id="circle-area-port">
                 <div id="circle-port" :style="`--deg: rotate(${deg}deg)`">
-                    <template x-for="(_,i) in 8">
+                    <template x-for="(content,i) in 8">
                         <div @click="rotate(i)" class="port"
                           :style="`--top: ${calcularCoordenadas(i).y}%; --rgt: ${calcularCoordenadas(i).x}%; --degObj: ${-deg}deg`;">
                         </div>
@@ -399,6 +409,64 @@
                 Alpine.data('ciclePort', () => ({
                     position: 0,
                     deg: 0,
+                    portContent: [
+                        {
+                            bg: "/assets/media/mockups/mockup-adv.png",
+                            img: "/assets/media/mockups/adv.png",
+                            title: "ADVOCACIA",
+                            text: "Site one-page desenvolvido como um modelo de site de advocacia",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-raissa.png",
+                            img: "/assets/media/mockups/sp.png",
+                            title: "SOCIAL PHOTOS",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-wellen.png",
+                            img: "/assets/media/mockups/dw.png",
+                            title: "DELICIAS DA WELLEN",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-adv.png",
+                            img: "/assets/media/mockups/adv.png",
+                            title: "Titulo",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-raissa.png",
+                            img: "/assets/media/mockups/sp.png",
+                            title: "Titulo",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-wellen.png",
+                            img: "/assets/media/mockups/dw.png",
+                            title: "Titulo",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-adv.png",
+                            img: "/assets/media/mockups/adv.png",
+                            title: "Titulo",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },
+                        {
+                            bg: "/assets/media/mockups/mockup-raissa.png",
+                            img: "/assets/media/mockups/sp.png",
+                            title: "Titulo",
+                            text: "Loren ipsun",
+                            link: "#"
+                        },                                                                    
+                    ],
 
                     rotate(pst) {
                         if (this.position == 0 && pst == 7) {
