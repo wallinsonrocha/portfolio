@@ -396,9 +396,9 @@
             </div>
             <div id="circle-area-port">
                 <div id="circle-port" :style="`--deg: rotate(${deg}deg)`">
-                    <template x-for="(content,i) in 8">
+                    <template x-for="(content,i) in portContent">
                         <div @click="rotate(i)" class="port"
-                          :style="`--top: ${calcularCoordenadas(i).y}%; --rgt: ${calcularCoordenadas(i).x}%; --degObj: ${-deg}deg`;">
+                          :style="`--top: ${calcularCoordenadas(i).y}%; --rgt: ${calcularCoordenadas(i).x}%; --degObj: ${-deg}deg; background-image: url(${content.img})`;">
                         </div>
                     </template>
                 </div>
