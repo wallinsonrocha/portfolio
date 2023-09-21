@@ -30,6 +30,17 @@
   opacity: 0;
   transition: all 0.3s linear;
 }
+#portifolio #portfolio-area .port .port-contet {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 20px;
+}
+#portifolio #portfolio-area .port .port-contet .port-link {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  text-align: center;
+  width: 100%;
+}
 #portifolio #portfolio-area .port img {
   height: 10rem;
   margin: 2rem 0;
@@ -48,11 +59,6 @@
   opacity: 0;
   transition: all 0.3s linear;
   transition-delay: 0.3s;
-}
-#portifolio #portfolio-area .port a {
-  padding: 0.5rem 1.2rem;
-  width: 200px;
-  text-align: center;
 }
 #portifolio #portfolio-area .port-active {
   transform: scale(1);
@@ -88,6 +94,7 @@
 #portifolio #circle-port .port {
   position: absolute;
   border-radius: 100%;
+  cursor: pointer;
   width: 8rem;
   height: 8rem;
   background: rgb(121, 168, 31);

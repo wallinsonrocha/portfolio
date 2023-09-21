@@ -11,6 +11,10 @@
         gap: 1.5rem;
         padding: 1rem;
         background-color: rgba($color: #0F4665, $alpha: 0.1);
+
+        h1{
+            margin-bottom: 2rem;
+        }
     }
 
     .why__content{       
@@ -44,6 +48,7 @@
             }
         }
 
+        // Animação dedicada a mobile para revelar conteúdo
         .why-text-reveal{
             height: 310px;
         }
@@ -78,34 +83,57 @@
     #why{
         display: flex;
         justify-content: center;
-        height: 1500px;
+        height: 1550px;
 
         #why__blurbg{
             display: flex;
             flex-direction: column;
+            align-items: start;
 
-            width: 1090px;
+            width: 1100px;
+
+            h1{
+                align-self: center;
+            }            
 
             .why__content{
-                width: 100%;
+                width: 200px;
                 margin-bottom: 10rem;
                 display: flex;
-                flex-direction: row;
+                flex-direction: row;          
+                      
 
                 justify-content: space-between;
                 align-items: center;
 
+                transition: .3s all linear;
+
                 .why-text{
                     display: flex;
                     flex-direction: column;
-                    height: auto;
-                    gap: 0px;                    
+                    height: 0px;                    
+                    gap: .5rem;       
+                    
+                    transition-delay: .3s;
                 }
 
                 img{
                     transform: scale(2.5);
-                    width: 20%;
+                    width: 200px;
                 }
+            }
+
+            // Animação para revelar conteúdo. Dedicado a desktop
+            .why-text-reveal-desk{
+                width: 1060px !important;
+
+                .why-text{
+                    height: 250px;
+                }
+            }
+
+            .why__content:nth-child(3){
+                align-self: self-end;
             }
         }
 

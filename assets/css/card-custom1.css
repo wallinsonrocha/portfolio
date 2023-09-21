@@ -190,3 +190,10 @@
 	background: #2e2e2e;
 	color: var(--clr);
 }
+
+
+@media (min-width: 1024px){
+	.container{
+		gap: 150px;
+	}
+}

@@ -3,7 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Wallinson Rocha">
+    <meta name="description" content="Está cansado de sites que travam o tempo todo e muito semelhante a muitos outros que você encontra na internet? Clique aqui para saber mais." />
+    <meta name="keywords" content="sites, site, web, desenvolvimento, programador, designer, desgin">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://wallinsondev.netlify.app">
+
+    <link rel="icon" type="image/png" href="/assets/media/Wallinson.png"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -20,7 +29,7 @@
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <title>Wallinson Dev | Desenvolvedor Web</title>
+    <title>Wallinson Dev | Desenvolvedor Web - Programador de Sites</title>
 </head>
 
 <body>
@@ -64,8 +73,8 @@
             <div id="why__blurbg">
                 <h1>Por que ter um Site?</h1>
                 <!-- Presença -->
-                <div class="why__content">
-                    <img src="assets/media/sites.png" alt="">
+                <div class="why__content why-reveal1-desk">
+                    <img src="assets/media/sites.png" alt="Site modelo">
                     <div class="why-text why-reveal1">
                         <h2>A <span>Presença</span> Digital é Vital</h2>
                         <p>
@@ -79,8 +88,8 @@
                 </div>
 
                 <!-- Estratégia -->
-                <div class="why__content">
-                    <img src="assets/media/site_settings.png" alt="">
+                <div class="why__content why-reveal2-desk">
+                    <img src="assets/media/site_settings.png" alt="Site modelo">
                     <div class="why-text why-reveal2">
                         <h2>Ferramenta <span>Estratégica</span></h2>
                         <p>
@@ -92,8 +101,8 @@
                 </div>
 
                 <!-- Destaque-se -->
-                <div class="why__content">
-                    <img src="assets/media/site_destaque.png" alt="">
+                <div class="why__content why-reveal3-desk">
+                    <img src="assets/media/site_destaque.png" alt="Site modelo">
                     <div class="why-text why-reveal3">
                         <h2><span>Destaque-se</span> na Multidão</h2>
                         <p>
@@ -117,8 +126,20 @@
                 elementContext += 1;
             }
 
+            function revealContentDesk() {
+                const facts = document.querySelector(`.why-reveal${elementContext}-desk`);
+
+                facts.classList.add('why-text-reveal-desk');
+
+                console.log(facts)
+
+                elementContext += 1;
+            }
+
             let revealText = {
                 opacity: 0,
+                desktop: false,
+                mobile: true,
                 viewOffset: {
                     top: 0,
                     right: 0,
@@ -128,10 +149,28 @@
                 afterReveal: revealContent,
             }
 
+            let revealTextDesk = {
+                opacity: 1,
+                desktop: true,
+                mobile: false,
+                viewOffset: {
+                    top: 0,
+                    right: 0,
+                    bottom: 200,
+                    left: 0,
+                },
+                afterReveal: revealContentDesk,
+            }
+
             window.sr = ScrollReveal();
             sr.reveal('.why-reveal1', revealText);
             sr.reveal('.why-reveal2', revealText);
             sr.reveal('.why-reveal3', revealText);
+
+            window.sr = ScrollReveal();
+            sr.reveal('.why-reveal1-desk', revealTextDesk);
+            sr.reveal('.why-reveal2-desk', revealTextDesk);
+            sr.reveal('.why-reveal3-desk', revealTextDesk);
         </script>
 
         <!-- SERVIÇOS - Conteúdo-->
@@ -139,11 +178,11 @@
             <h1>Conheça mais sobre os serviços</h1>
 
             <div style="position: relative;">
-                <img class="z-1" src="assets/media/comp1.png" alt="">
+                <img class="z-1" src="assets/media/comp1.png" alt="Serviço modelo">
                 <div class="z-2">
-                    <img src="assets/media/comp2.png" alt="">
-                    <img src="assets/media/comp3.png" alt="">
-                    <img src="assets/media/comp4.png" alt="">
+                    <img src="assets/media/comp2.png" alt="Serviço icon 1">
+                    <img src="assets/media/comp3.png" alt="Serviço icon 2">
+                    <img src="assets/media/comp4.png" alt="Serviço icon 3">
                 </div>
                 <img class="z-3" id="computer" src="assets/media/computer.png" alt="Computador">
             </div>
@@ -388,10 +427,10 @@
                 <template x-for="(content,i) in (portContent)">
                     <div class="port" x-bind:class="(position==i) ? 'port-active' : ''" x-bind:style="`background-image: url(${content.bg})`">
                         <img x-bind:src="content.img">
-                        <div>
+                        <div class="port-contet">
                             <h2 x-text="content.title"></h2>    
                             <p x-text="content.text"></p>
-                            <a x-bind:href="content.link">Ver site</a>
+                            <a class="port-link" target="_blank" x-bind:href="content.link">Ver site</a>
                         </div>
                     </div>
                 </template>
@@ -416,58 +455,58 @@
                             bg: "/assets/media/mockups/mockup-adv.png",
                             img: "/assets/media/mockups/adv.png",
                             title: "ADVOCACIA",
-                            text: "Site one-page desenvolvido como um modelo de site de advocacia",
-                            link: "#"
+                            text: "Site one-page desenvolvido como um modelo de site de advocacia. Nele foi implementado diversas funções para torná-lo mais dinâmico melhorando a experiência do usuário.",
+                            link: "https://advocacia-tmp.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-raissa.png",
                             img: "/assets/media/mockups/sp.png",
                             title: "SOCIAL PHOTOS",
-                            text: "Loren ipsun",
-                            link: "#"
+                            text: "Landing page utilizada para a venda de um curso de como melhorar o seu feed no instagram.",
+                            link: "https://socialphotos.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-wellen.png",
                             img: "/assets/media/mockups/dw.png",
                             title: "DELICIAS DA WELLEN",
-                            text: "Loren ipsun",
-                            link: "#"
+                            text: "Landing page para homenagear a confeiteira Maranhense Wellen Khrisna.",
+                            link: "https://master--deliciasdawellen.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-adv.png",
                             img: "/assets/media/mockups/adv.png",
-                            title: "Titulo",
-                            text: "Loren ipsun",
-                            link: "#"
+                            title: "ADVOCACIA",
+                            text: "Site one-page desenvolvido como um modelo de site de advocacia. Nele foi implementado diversas funções para torná-lo mais dinâmico melhorando a experiência do usuário.",
+                            link: "https://advocacia-tmp.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-raissa.png",
                             img: "/assets/media/mockups/sp.png",
-                            title: "Titulo",
-                            text: "Loren ipsun",
-                            link: "#"
+                            title: "SOCIAL PHOTOS",
+                            text: "Landing page utilizada para a venda de um curso de como melhorar o seu feed no instagram.",
+                            link: "https://socialphotos.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-wellen.png",
                             img: "/assets/media/mockups/dw.png",
-                            title: "Titulo",
-                            text: "Loren ipsun",
-                            link: "#"
+                            title: "DELICIAS DA WELLEN",
+                            text: "Landing page para homenagear a confeiteira Maranhense Wellen Khrisna.",
+                            link: "https://master--deliciasdawellen.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-adv.png",
                             img: "/assets/media/mockups/adv.png",
-                            title: "Titulo",
-                            text: "Loren ipsun",
-                            link: "#"
+                            title: "ADVOCACIA",
+                            text: "Site one-page desenvolvido como um modelo de site de advocacia. Nele foi implementado diversas funções para torná-lo mais dinâmico melhorando a experiência do usuário.",
+                            link: "https://advocacia-tmp.netlify.app/"
                         },
                         {
                             bg: "/assets/media/mockups/mockup-raissa.png",
                             img: "/assets/media/mockups/sp.png",
-                            title: "Titulo",
-                            text: "Loren ipsun",
-                            link: "#"
-                        },                                                                    
+                            title: "SOCIAL PHOTOS",
+                            text: "Landing page utilizada para a venda de um curso de como melhorar o seu feed no instagram.",
+                            link: "https://socialphotos.netlify.app/"
+                        },                                                                                                                 
                     ],
 
                     rotate(pst) {
@@ -505,7 +544,7 @@
         <section id="sobre-mim-cta">
             <h1>Sobre mim</h1>
             <div class="sobre-img-content">
-                <img src="assets/media/Wallinson.png" alt="">
+                <img src="assets/media/Wallinson.png" alt="Sobre mim">
                 <div id="about_content">
                     <h3>Prazer, eu sou Wallinson</h3>
                     <div id="content__paragrafs">

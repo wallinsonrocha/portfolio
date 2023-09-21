@@ -47,13 +47,31 @@
 
 @media (min-width: 1024px){
     #sobre-mim-cta{
+
         .sobre-img-content{
+            width: 100%;
+
             flex-direction: row-reverse;
             justify-content: space-between;
         }
 
         img{
-            width: 60%;
+            width: 550px;
+        }
+    }
+}
+
+@media (min-width: 1366px){
+    #sobre-mim-cta{
+        .sobre-img-content{
+            width: 100%;
+
+            flex-direction: row-reverse;
+            justify-content: space-around;
+        }
+
+        img{
+            width: 550px;
         }
     }
 }

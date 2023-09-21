@@ -19,61 +19,66 @@
 
             display: flex;
             flex-direction: column;
-            align-items: center;            
+            align-items: center;
 
             padding: 4rem 1rem;
-    
+
             background-position: center;
             background-size: cover;
 
             transform: scale(2);
             opacity: 0;
-            transition: all .3s linear;
+            transition: all 0.3s linear;            
 
-            img{
+            .port-contet{
+                background-color: rgba($color: #000000, $alpha: 0.4);
+                padding: 1rem;
+                border-radius: 20px;
+
+                .port-link {
+                    display: inline-block;
+                    padding: 0.5rem 1.2rem;                    
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            img {
                 height: 10rem;
                 margin: 2rem 0;
                 object-fit: cover;
             }
 
-            h2{
+            h2 {
                 transform: translateY(-20px);
                 opacity: 0;
 
-                transition: all .3s linear;
-                transition-delay: .3s;
+                transition: all 0.3s linear;
+                transition-delay: 0.3s;
             }
 
-            p{
+            p {
                 max-width: 350px;
                 margin: 1rem 0;
                 transform: translateY(-20px);
                 opacity: 0;
 
-                transition: all .3s linear;
-                transition-delay: .3s;
-            }
+                transition: all 0.3s linear;
+                transition-delay: 0.3s;
+            }            
+        }        
 
-            a{
-                padding: .5rem 1.2rem;
-                width: 200px;
-                text-align: center;
-            }
-
-
-        }
-
-        .port-active{
+        .port-active {
             transform: scale(1);
             opacity: 1;
-            
+
             z-index: 2;
 
-            h2{
+            h2 {
                 transform: translateY(0px);
                 opacity: 1;
             }
-            p{
+            p {
                 transform: translateY(0px);
                 opacity: 1;
             }
@@ -116,6 +121,8 @@
             position: absolute;
             border-radius: 100%;
 
+            cursor: pointer;
+
             width: 8rem;
             height: 8rem;
 
@@ -125,7 +132,7 @@
                 rgba(121, 168, 31, 1) 0%,
                 rgba(66, 77, 6, 1) 100%
             );
-            
+
             background-size: cover;
             background-position: center;
 
@@ -161,7 +168,7 @@
         #circle-area-port {
             position: relative;
             margin-top: 76vh;
-        }        
+        }
         #circle-port {
             height: 800px;
             width: 800px;
@@ -173,7 +180,7 @@
         }
 
         #portfolio-area {
-            .port{
+            .port {
                 flex-direction: row;
                 align-items: start;
                 justify-content: center;
