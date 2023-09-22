@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Wallinson Rocha">
-    <meta name="description" content="Está cansado de sites que travam o tempo todo e muito semelhante a muitos outros que você encontra na internet? Clique aqui para saber mais." />
+    <meta name="description"
+      content="Está cansado de sites que travam o tempo todo e muito semelhante a muitos outros que você encontra na internet? Clique aqui para saber mais." />
     <meta name="keywords" content="sites, site, web, desenvolvimento, programador, designer, desgin">
 
-    <link rel="canonical" href="https://wallinsondev.netlify.app">
+    <link rel="canonical" href="https://wallinsondev.com">
     <link rel="sitemap" href="./sitemap.xml">
 
-    <link rel="icon" type="image/png" href="/assets/media/Wallinson.png"/>
+    <link rel="icon" type="image/png" href="/assets/media/Wallinson.png" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -29,8 +30,17 @@
 
     <!-- Scroll Reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-
     <title>Wallinson Dev | Desenvolvedor Web - Programador de Sites</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M5GM16SK1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8M5GM16SK1');
+    </script>
 </head>
 
 <body>
@@ -49,7 +59,7 @@
     <main>
 
         <!-- HOME -->
-        <section id="home">            
+        <section id="home">
             <img id="logo" src="assets/media/logo.svg" alt="Logo Wallinson">
 
             <div class="content-home">
@@ -297,7 +307,7 @@
             function boxActive() {
                 const boxEl = document.querySelector(`.box-srv${box}`);
 
-                boxEl.classList.add('box-active');                
+                boxEl.classList.add('box-active');
 
                 box += 1;
             }
@@ -426,10 +436,11 @@
         <section id="portifolio" x-data="ciclePort">
             <div id="portfolio-area">
                 <template x-for="(content,i) in (portContent)">
-                    <div class="port" x-bind:class="(position==i) ? 'port-active' : ''" x-bind:style="`background-image: url(${content.bg})`">
+                    <div class="port" x-bind:class="(position==i) ? 'port-active' : ''"
+                      x-bind:style="`background-image: url(${content.bg})`">
                         <img x-bind:src="content.img">
                         <div class="port-contet">
-                            <h2 x-text="content.title"></h2>    
+                            <h2 x-text="content.title"></h2>
                             <p x-text="content.text"></p>
                             <a class="port-link" target="_blank" x-bind:href="content.link">Ver site</a>
                         </div>
@@ -507,7 +518,7 @@
                             title: "SOCIAL PHOTOS",
                             text: "Landing page utilizada para a venda de um curso de como melhorar o seu feed no instagram.",
                             link: "https://socialphotos.netlify.app/"
-                        },                                                                                                                 
+                        },
                     ],
 
                     rotate(pst) {
@@ -550,20 +561,25 @@
                     <h3>Prazer, eu sou Wallinson</h3>
                     <div id="content__paragrafs">
                         <p>
-                            Olá! Sou Wallinson, um Desenvolvedor Web apaixonado por transformar ideias em realidade digital.
+                            Olá! Sou Wallinson, um Desenvolvedor Web apaixonado por transformar ideias em realidade
+                            digital.
                             Com
-                            uma vasta experiência que abrange desde HTML e CSS até ferramentas robustas como o Django, estou
+                            uma vasta experiência que abrange desde HTML e CSS até ferramentas robustas como o Django,
+                            estou
                             aqui para impulsionar o seu sucesso.
                         </p>
-    
+
                         <p>
-                            Minha missão sempre foi ajudar pequenas e médias empresas a prosperar, aumentando suas vendas e
-                            presença online. Se você está em busca de um parceiro para fortalecer o seu negócio na web, não
+                            Minha missão sempre foi ajudar pequenas e médias empresas a prosperar, aumentando suas
+                            vendas e
+                            presença online. Se você está em busca de um parceiro para fortalecer o seu negócio na web,
+                            não
                             hesite em me contatar.
                         </p>
-    
+
                         <p>
-                            Não perca mais tempo, solicite um orçamento e vamos começar a trabalhar juntos na construção do
+                            Não perca mais tempo, solicite um orçamento e vamos começar a trabalhar juntos na construção
+                            do
                             seu
                             sucesso online. Venha fazer parte do nosso time!
                         </p>
