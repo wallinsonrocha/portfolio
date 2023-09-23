@@ -102,6 +102,10 @@ header {
         width: 100%;
         gap: 2rem;
 
+        a{
+            width:100%;
+        }
+
         li {
             border-bottom: 1px solid #000;
         }
@@ -157,17 +161,19 @@ header {
             flex-direction: row;
             color: #000;
             gap: 2rem;
+
+            a{
+                width:auto;
+            }
+
+             li {                       
+                border: none;
+            }
         }
         div {
             display: flex;
             gap: 2rem;
-        }
-        
-        nav{
-            li {                       
-                border: none;
-            }
-        }    
+        }             
 
         a {
             color: #fff;
