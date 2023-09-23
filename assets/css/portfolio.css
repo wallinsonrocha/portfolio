@@ -1,4 +1,4 @@
-#portifolio {
+#portfolio {
   position: relative;
   position: relative;
   padding: 0;
@@ -6,14 +6,14 @@
   width: 100vw;
   overflow: hidden;
 }
-#portifolio #portfolio-area {
+#portfolio #portfolio-area {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
 }
-#portifolio #portfolio-area .port {
+#portfolio #portfolio-area .port {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -30,29 +30,29 @@
   opacity: 0;
   transition: all 0.3s linear;
 }
-#portifolio #portfolio-area .port .port-contet {
+#portfolio #portfolio-area .port .port-contet {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 20px;
 }
-#portifolio #portfolio-area .port .port-contet .port-link {
+#portfolio #portfolio-area .port .port-contet .port-link {
   display: inline-block;
   padding: 0.5rem 1.2rem;
   text-align: center;
   width: 100%;
 }
-#portifolio #portfolio-area .port img {
+#portfolio #portfolio-area .port img {
   height: 10rem;
   margin: 2rem 0;
   object-fit: cover;
 }
-#portifolio #portfolio-area .port h2 {
+#portfolio #portfolio-area .port h2 {
   transform: translateY(-20px);
   opacity: 0;
   transition: all 0.3s linear;
   transition-delay: 0.3s;
 }
-#portifolio #portfolio-area .port p {
+#portfolio #portfolio-area .port p {
   max-width: 350px;
   margin: 1rem 0;
   transform: translateY(-20px);
@@ -60,25 +60,25 @@
   transition: all 0.3s linear;
   transition-delay: 0.3s;
 }
-#portifolio #portfolio-area .port-active {
+#portfolio #portfolio-area .port-active {
   transform: scale(1);
   opacity: 1;
   z-index: 2;
 }
-#portifolio #portfolio-area .port-active h2 {
+#portfolio #portfolio-area .port-active h2 {
   transform: translateY(0px);
   opacity: 1;
 }
-#portifolio #portfolio-area .port-active p {
+#portfolio #portfolio-area .port-active p {
   transform: translateY(0px);
   opacity: 1;
 }
-#portifolio #circle-area-port {
+#portfolio #circle-area-port {
   position: relative;
   margin-top: 86vh;
   z-index: 3;
 }
-#portifolio #circle-port {
+#portfolio #circle-port {
   position: absolute;
   right: 0;
   left: 0;
@@ -91,7 +91,7 @@
   transform: var(--deg);
   transition: all 1s ease;
 }
-#portifolio #circle-port .port {
+#portfolio #circle-port .port {
   position: absolute;
   border-radius: 100%;
   cursor: pointer;
@@ -108,33 +108,33 @@
 }
 
 @media (max-width: 499px) {
-  #portifolio #circle-area-port {
+  #portfolio #circle-area-port {
     position: relative;
     margin-top: 86vh;
   }
-  #portifolio #circle-port {
+  #portfolio #circle-port {
     height: 300px;
     width: 300px;
   }
-  #portifolio #circle-port .port {
+  #portfolio #circle-port .port {
     width: 5rem;
     height: 5rem;
   }
 }
 @media (min-width: 1024px) {
-  #portifolio #circle-area-port {
+  #portfolio #circle-area-port {
     position: relative;
     margin-top: 76vh;
   }
-  #portifolio #circle-port {
+  #portfolio #circle-port {
     height: 800px;
     width: 800px;
   }
-  #portifolio #circle-port .port {
+  #portfolio #circle-port .port {
     width: 10rem;
     height: 10rem;
   }
-  #portifolio #portfolio-area .port {
+  #portfolio #portfolio-area .port {
     flex-direction: row;
     align-items: start;
     justify-content: center;

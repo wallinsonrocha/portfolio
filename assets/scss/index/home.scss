@@ -1,6 +1,7 @@
 #home {
     position: relative;
 
+    margin-top: 4rem;
     height: 100vh;
     background-image: url("../media/background_home.jpeg");
     background-position: center;
@@ -71,6 +72,8 @@
   #home {
     display: flex;
     align-items: center;
+    height: 90vh;
+    margin-top: 0;
 
     .content-home {
         margin-top: 0;
