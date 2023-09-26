@@ -65,7 +65,7 @@
     <header x-data="{ isSticky: false, open: false }" x-on:scroll.window="isSticky = window.scrollY > 32"
       x-bind:class="{ 'header_op': isSticky }">
         <div id="menu_mobile">
-            <a id="logo" href="#home">
+            <a id="logo-header" href="#home">
                 <img src="assets/media/logo.svg" alt="Logo">
             </a>
             <div class="menu-mobile" @click="open = !open" :class="{'menu-mobile-open': open}">
@@ -77,19 +77,19 @@
         <div id="navbar" x-bind:class="{'open_nav': open}">
             <nav @click="open = false">
                 <a href="#home">
-                    <li>Início</li>
+                    Início
                 </a>
                 <a href="#why">
-                    <li>Por que um site?</li>
+                    Por que um site?
                 </a>
                 <a href="#services">
-                    <li>Serviços</li>
+                    Serviços
                 </a>
                 <a href="#skills">
-                    <li>Ferramentas</li>
+                    Ferramentas
                 </a>
                 <a href="#portfolio">
-                    <li>Projetos</li>
+                    Projetos
                 </a>
                 <a href="#sobre-mim-cta">Sobre mim</a>
             </nav>
@@ -672,18 +672,16 @@
             <a href="https://www.iubenda.com/privacy-policy/28869638/cookie-policy"
               class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe "
               title="Política de Cookies ">Política de Cookies</a>
+            <script
+              type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
+            <script
+              type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
         </div>
         <div>
             <p>Copyright ® 2023. Wallinson Rocha. Todos os direitos reservados.</p>
         </div>
     </footer>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    <!-- Iubenda -->
-    <script
-      type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
-    <script
-      type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
 </body>
 
 </html>

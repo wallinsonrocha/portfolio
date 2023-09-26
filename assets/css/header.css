@@ -21,10 +21,10 @@ header #menu_mobile {
   -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.75);
 }
-header #menu_mobile #logo {
+header #menu_mobile #logo-header {
   height: 100%;
 }
-header #menu_mobile #logo img {
+header #menu_mobile #logo-header img {
   height: 2rem;
 }
 header #menu_mobile .menu-mobile {
