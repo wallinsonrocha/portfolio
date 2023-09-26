@@ -36,18 +36,31 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Wallinson Dev | Desenvolvedor Web - Programador de Sites</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8M5GM16SK1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NLW6JJX8');</script>
+    <!-- End Google Tag Manager -->
 
-        gtag('config', 'G-8M5GM16SK1');
+    <!-- Iubenda -->
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = { "askConsentAtCookiePolicyUpdate": true, "enableGdpr": false, "enableLgpd": true, "floatingPreferencesButtonDisplay": "bottom-right", "lang": "pt-BR", "perPurposeConsent": true, "siteId": 3322681, "whitelabel": false, "cookiePolicyId": 28869638, "banner": { "acceptButtonDisplay": true, "backgroundOverlay": true, "closeButtonDisplay": false, "customizeButtonDisplay": true, "explicitWithdrawal": true, "position": "bottom", "rejectButtonDisplay": true } };
     </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3322681.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/stable/iubenda_cs.js" charset="UTF-8" async></script>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLW6JJX8" height="0" width="0"
+          style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header - Conteudo -->
     <header x-data="{ isSticky: false, open: false }" x-on:scroll.window="isSticky = window.scrollY > 32"
       x-bind:class="{ 'header_op': isSticky }">
@@ -63,11 +76,21 @@
         </div>
         <div id="navbar" x-bind:class="{'open_nav': open}">
             <nav @click="open = false">
-                <a href="#home"><li>Início</li></a>
-                <a href="#why"><li>Por que um site?</li></a>
-                <a href="#services"><li>Serviços</li></a>
-                <a href="#skills"><li>Ferramentas</li></a>
-                <a href="#portfolio"><li>Projetos</li></a>
+                <a href="#home">
+                    <li>Início</li>
+                </a>
+                <a href="#why">
+                    <li>Por que um site?</li>
+                </a>
+                <a href="#services">
+                    <li>Serviços</li>
+                </a>
+                <a href="#skills">
+                    <li>Ferramentas</li>
+                </a>
+                <a href="#portfolio">
+                    <li>Projetos</li>
+                </a>
                 <a href="#sobre-mim-cta">Sobre mim</a>
             </nav>
             <div id="social">
@@ -642,10 +665,25 @@
 
     </main>
     <footer>
-        <p>Copyright ® 2023. Wallinson Rocha.</p>
-        <p>Todos os direitos reservados.</p>
+        <div>
+            <a href="https://www.iubenda.com/privacy-policy/28869638"
+              class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe "
+              title="Política de Privacidade ">Política de Privacidade</a>
+            <a href="https://www.iubenda.com/privacy-policy/28869638/cookie-policy"
+              class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe "
+              title="Política de Cookies ">Política de Cookies</a>
+        </div>
+        <div>
+            <p>Copyright ® 2023. Wallinson Rocha. Todos os direitos reservados.</p>
+        </div>
     </footer>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Iubenda -->
+    <script
+      type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
+    <script
+      type="text/javascript">(function (w, d) { var loader = function () { var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s, tag); }; if (w.addEventListener) { w.addEventListener("load", loader, false); } else if (w.attachEvent) { w.attachEvent("onload", loader); } else { w.onload = loader; } })(window, document);</script>
 </body>
 
 </html>
