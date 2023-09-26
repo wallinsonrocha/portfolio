@@ -60,6 +60,17 @@ footer{
     place-items: center;
 }
 
+.iub__us-widget__wrapper{
+    display: flex;
+    gap: 2rem;
+}
+
+.iub__us-widget__wrapper a{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
 @media (min-width: 768px){
     section{
         padding: 3rem;
