@@ -84,7 +84,7 @@
                     Projetos
                 </a>
                 <a href="#sobre-mim-cta">Sobre mim</a>
-                <a href="/politica-de-privacidade">Politica de privacidade</a>                
+                <a href="/politica-de-privacidade">Politica de privacidade</a>
             </nav>
             <div id="social">
                 <a href="https://www.instagram.com/wallinsonrocha_dev/">
@@ -268,7 +268,7 @@
                             <a href="https://forms.gle/aBjNwshBTr1QbzCq7">Solicitar orçamento</a>
                         </div>
                     </div>
-                </div>                            
+                </div>
                 <!-- Institucional -->
                 <div class="box box-srv2" style="--clr:#5b98eb;">
                     <div class="content">
@@ -405,7 +405,7 @@
                             desempenho excepcional.
                         </p>
                     </div>
-                </div>                
+                </div>
             </div>
         </section>
         <!-- FERRAMENTAS - Javascript -->
@@ -458,7 +458,7 @@
             <div id="circle-area-port">
                 <div id="circle-port" :style="`--deg: rotate(${deg}deg)`">
                     <template x-for="(content,i) in portContent">
-                        <div @click="rotate(i)" class="port"
+                        <div @click="rotate(i)" class="port" x-bind:class="(position==i) ? 'port-active' : ''"
                           :style="`--top: ${calcularCoordenadas(i).y}%; --rgt: ${calcularCoordenadas(i).x}%; --degObj: ${-deg}deg; background-image: url(${content.img})`;">
                         </div>
                     </template>
@@ -598,27 +598,95 @@
         </section>
 
         <!-- DÚVIDAS -->
-        <!--         
+
         <section id="duvidas">
             <h1>Dúvidas?</h1>
             <div>
+                <!-- Duvida -->
                 <div class="ask-content" x-data="{open: false}">
                     <div class="content_ask" @click="open = !open">
-                        <p>Dúvida 1?</p>
+                        <!-- Duvida - Título -->
+                        <p>Tenho custos adicionais além do Site?</p>
                         <div class="content_expand" x-bind:class="open ? 'content_expand_close' : ''">
                             <div></div>
                             <div></div>
                         </div>
                     </div>
                     <div class="content_answer" x-bind:class="open ? 'answer_open' : ''">
+                        <!-- Duvida - Conteúdo -->
                         <p>
-                            Loren Ipsun
+                            Sim, existem custos adicionais além do desenvolvimento do site. Para mantê-lo online, você
+                            precisará adquirir um domínio, que geralmente custa em média R$60,00 por ano, e também
+                            contratar um serviço de hospedagem, com um custo médio de R$14,00 por mês. Esses são os
+                            custos recorrentes necessários para manter seu site acessível na internet.
                         </p>
                     </div>
-                </div>                
-            </div>
-        </section> -->
+                </div>
 
+                <!-- Duvida -->
+                <div class="ask-content" x-data="{open: false}">
+                    <div class="content_ask" @click="open = !open">
+                        <!-- Duvida - Título -->
+                        <p>Tenho acesso para edição?</p>
+                        <div class="content_expand" x-bind:class="open ? 'content_expand_close' : ''">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="content_answer" x-bind:class="open ? 'answer_open' : ''">
+                        <!-- Duvida - Conteúdo -->
+                        <p>
+
+                            Sim, você terá a capacidade de fazer edições em seu site, pois terá acesso aos arquivos
+                            necessários. No entanto, é importante ressaltar que o processo de edição será diferente em
+                            comparação com sites que utilizam o WordPress, uma vez que ele é desenvolvido com HTML, CSS
+                            e Javascript. Porém, ele será adaptado para que as modificações mais comuns sejam fáceis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Duvida -->
+                <div class="ask-content" x-data="{open: false}">
+                    <div class="content_ask" @click="open = !open">
+                        <!-- Duvida - Título -->
+                        <p>Ele será responsivo para Celulares?</p>
+                        <div class="content_expand" x-bind:class="open ? 'content_expand_close' : ''">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="content_answer" x-bind:class="open ? 'answer_open' : ''">
+                        <!-- Duvida - Conteúdo -->
+                        <p>
+                            Certamente! O site será completamente adaptado e responsivo para funcionar perfeitamente em
+                            dispositivos móveis, proporcionando uma experiência de navegação otimizada em celulares e
+                            tablets.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Duvida -->
+                <div class="ask-content" x-data="{open: false}">
+                    <div class="content_ask" @click="open = !open">
+                        <!-- Duvida - Título -->
+                        <p>Por onde será a comunicação durante o desenvolvimento do Site?</p>
+                        <div class="content_expand" x-bind:class="open ? 'content_expand_close' : ''">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="content_answer" x-bind:class="open ? 'answer_open' : ''">
+                        <!-- Duvida - Conteúdo -->
+                        <p>
+                            Após a contratação dos nossos serviços, realizaremos reuniões estratégicas durante o
+                            processo de desenvolvimento do site, permitindo que você esteja envolvido de forma próxima
+                            no acompanhamento do projeto. Além disso, você terá a oportunidade de esclarecer suas
+                            dúvidas por meio de nosso canal exclusivo de atendimento no Whatsapp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <nav>

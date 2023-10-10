@@ -28,16 +28,16 @@
 
             transform: scale(2);
             opacity: 0;
-            transition: all 0.3s linear;            
+            transition: all 0.3s linear;
 
-            .port-contet{
+            .port-contet {
                 background-color: rgba($color: #000000, $alpha: 0.4);
                 padding: 1rem;
                 border-radius: 20px;
 
                 .port-link {
                     display: inline-block;
-                    padding: 0.5rem 1.2rem;                    
+                    padding: 0.5rem 1.2rem;
                     text-align: center;
                     width: 100%;
                 }
@@ -65,8 +65,8 @@
 
                 transition: all 0.3s linear;
                 transition-delay: 0.3s;
-            }            
-        }        
+            }
+        }
 
         .port-active {
             transform: scale(1);
@@ -119,6 +119,7 @@
 
         .port {
             position: absolute;
+            display: flex;
             border-radius: 100%;
 
             cursor: pointer;
@@ -140,7 +141,56 @@
 
             top: var(--top);
             right: var(--rgt);
-            transition: all 1s ease;
+            transition: all 1s ease;         
+            
+            &::after {
+                content: "";
+                position: absolute;
+                border: 6px solid #fff;
+                border-radius: 50%;                    
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+                animation-delay: .5s;
+                animation: ripple .5s cubic-bezier(.03, .54, .6, .63) infinite;
+
+                transition: all 1s ease;
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                border: 6px solid #fff;
+                border-radius: 50%;            
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+                animation: ripple 1s cubic-bezier(.03, .54, .6, .63) infinite;            
+                
+                transition: all 1s ease;
+            }
+        }
+
+        .port-active{
+            &::after, &::before {
+                content: "";
+                position: absolute;
+                border: 8px solid #fff;
+                border-radius: 50%;            
+
+                width: 105%;
+                height: 105%;
+
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+                animation: none;  
+            }
         }
     }
 }
@@ -190,4 +240,31 @@
             }
         }
     }
+}
+
+
+@keyframes ripple {
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }    
+
+    5%{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    5.1%{
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100%{
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }    
 }

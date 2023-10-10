@@ -38,7 +38,7 @@
             overflow: hidden;
             
             max-width: 410px;
-            height: 0px;
+            grid-template-rows: 0fr;
 
             transition: all .3s linear;
 
@@ -50,7 +50,7 @@
 
         // Animação dedicada a mobile para revelar conteúdo
         .why-text-reveal{
-            height: 240px;
+            grid-template-rows: 1fr;
         }
 
         h2{
