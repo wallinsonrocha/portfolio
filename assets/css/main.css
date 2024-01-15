@@ -68,7 +68,7 @@ footer {
 
     display: grid;
     gap: 1rem;
-    place-items: left;
+    place-items: center;
 }
 
 footer a {
