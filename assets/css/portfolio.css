@@ -35,6 +35,11 @@
   padding: 1rem;
   border-radius: 20px;
 }
+#portfolio #portfolio-area .port .port-contet {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 20px;
+}
 #portfolio #portfolio-area .port .port-contet .port-link {
   display: inline-block;
   padding: 0.5rem 1.2rem;
